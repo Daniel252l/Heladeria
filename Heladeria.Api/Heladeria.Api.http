@@ -1,0 +1,11 @@
+@Heladeria_Api_HostAddress = https://localhost:7216
+
+GET {{Heladeria_Api_HostAddress}}/salud
+Accept: application/json
+
+###
+
+GET {{Heladeria_Api_HostAddress}}/api/estado
+Accept: application/json
+
+###
