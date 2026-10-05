@@ -1,0 +1,36 @@
+@media (width < 640px) {
+  .tabla-produccion,
+  .tabla-produccion tbody { display: block; }
+  .tabla-produccion thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .tabla-produccion tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: .5rem;
+  }
+  .tabla-produccion tbody td {
+    display: block;
+    min-width: 0;
+    padding: .65rem .5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .tabla-produccion td::before {
+    content: attr(data-etiqueta);
+    display: block;
+    margin-bottom: .35rem;
+    color: #64748b;
+    font-size: .7rem;
+    font-weight: 600;
+  }
+  .tabla-produccion td[colspan]::before { display: none; }
+  .tabla-produccion td[colspan],
+  .tabla-produccion td:last-child { grid-column: 1 / -1; }
+  .tabla-produccion td a,
+  .tabla-produccion td button { min-height: 2.75rem; align-content: center; }
+}
