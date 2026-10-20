@@ -1,0 +1,17 @@
+.reportes-vista { min-width: 0; }
+.reportes-vista > header > div { min-width: 0; }
+.reportes-vista h1 { overflow-wrap: anywhere; }
+.reportes-vista input, .reportes-vista select { max-width: 100%; }
+.reporte-tabla { min-width: 0; overflow-x: auto; }
+.reporte-tabla > div { overflow-x: visible; }
+.reporte-tabla:focus-visible { outline: 2px solid #0f766e; outline-offset: -2px; }
+/* Reutiliza TablaVentas, manteniendo columnas comparables también en móvil.
+   La excepción está acotada a reportes; no altera Visual 5/6/7. */
+.reporte-tabla .tabla-ventas { display: table; min-width: 64rem; }
+.reporte-tabla .tabla-ventas thead { display: table-header-group; position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
+.reporte-tabla .tabla-ventas tbody { display: table-row-group; }
+.reporte-tabla .tabla-ventas tbody tr { display: table-row; padding: 0; }
+.reporte-tabla .tabla-ventas tbody td { display: table-cell; padding: 1rem; }
+.reporte-tabla .tabla-ventas td::before { display: none; }
+.reporte-tabla th, .reporte-tabla td { white-space: nowrap; }
+.reporte-tabla .tabla-ventas > tbody > tr:nth-child(even) { background: #f8fafc; }
