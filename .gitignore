@@ -1,0 +1,47 @@
+# .NET
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+**/TestResults/
+
+# Frontend
+**/node_modules/
+**/dist/
+**/coverage/
+**/test-results/
+**/playwright-report/
+/artifacts/
+/artifacts-incompletos-*/
+*.local
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Herramientas y sistema
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+
+# Material privado y exportaciones locales; nunca son entregables de código.
+*.pfx
+*.p12
+*.key
+*.pem
+*.publishsettings
+*.pubxml.user
+secrets.json
+**/secrets/
+**/tokens/
+**/privatecerts/
+**/logs/
+**/temp-exports/
+*.bak
+*.trn
+*.mdf
+*.ldf
+*.tmp

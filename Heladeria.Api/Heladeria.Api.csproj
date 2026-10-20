@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>heladeria-api-desarrollo</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.30" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.30">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Heladeria.Aplicacion\Heladeria.Aplicacion.csproj" />
+    <ProjectReference Include="..\Heladeria.Infraestructura\Heladeria.Infraestructura.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- La publicación no transporta configuración local, fixtures ni material privado. -->
+    <Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.Production.json" CopyToPublishDirectory="PreserveNewest" />
+    <Content Update="**/*.http;**/*.pfx;**/*.p12;**/*.pem;**/*.key;**/secrets.json;Properties/**" CopyToPublishDirectory="Never" />
+    <None Update="**/*.http;**/*.pfx;**/*.p12;**/*.pem;**/*.key;**/secrets.json;Properties/**" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
+</Project>
