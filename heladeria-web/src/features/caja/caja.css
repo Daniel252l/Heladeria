@@ -1,0 +1,12 @@
+.caja-vista { min-width: 0; }
+.caja-vista > header { flex-wrap: wrap; }
+.caja-vista > header > div { min-width: 0; max-width: 100%; flex-shrink: 1; }
+.caja-vista h1, .caja-vista h2, .caja-vista dd, .caja-modal { overflow-wrap: anywhere; }
+.caja-vista input, .caja-vista select, .caja-modal input, .caja-modal select { max-width: 100%; }
+.caja-modal fieldset { min-width: 0; }
+.caja-acciones > a, .caja-acciones > button { min-height: 3rem; white-space: normal; text-align: center; justify-content: center; gap: .5rem; }
+.caja-vista .tabla-ventas td { overflow-wrap: anywhere; max-width: 22rem; }
+@media (width < 640px) {
+  .caja-vista .tabla-ventas td { max-width: none; }
+  .caja-modal button { min-height: 2.75rem; white-space: normal; }
+}
