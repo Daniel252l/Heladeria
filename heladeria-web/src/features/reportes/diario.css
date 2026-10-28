@@ -1,0 +1,16 @@
+.diario-vista { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+@page diario { size:A4 landscape; margin:10mm; }
+@media print {
+  body:has(.diario-vista) { background:white; }
+  body:has(.diario-vista) #root *:not(:has(.diario-vista)):not(.diario-vista):not(.diario-vista *) { display:none !important; }
+  body:has(.diario-vista) #root *:has(.diario-vista) { display:block !important; position:static !important; width:auto !important; height:auto !important; min-height:0 !important; padding:0 !important; margin:0 !important; overflow:visible !important; background:white !important; }
+  .diario-vista { page:diario; font-size:10px; color:black; }
+  .diario-no-imprimir { display:none !important; }
+  .diario-vista :has(> .reporte-tabla) > p { display:none; }
+  .diario-vista .reporte-tabla, .diario-vista .reporte-tabla > div { overflow:visible; }
+  .diario-vista .tabla-ventas { min-width:0; width:100%; table-layout:auto; font-size:11px; }
+  .diario-vista .reporte-tabla th, .diario-vista .reporte-tabla .tabla-ventas td { white-space:normal; padding:4px; overflow-wrap:anywhere; }
+  .diario-vista tr { break-inside:avoid; }
+  .diario-vista h2 { break-after:avoid; font-size:13px; }
+  .diario-vista a { color:black; text-decoration:none; }
+}
